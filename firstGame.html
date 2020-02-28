@@ -1,0 +1,93 @@
+<html>
+  <head>
+        <script src="p5.min.js"></script>
+
+  </head>
+  <body>
+    <script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+var playerX = w/2
+var playerY = h/2
+var a = (h-60)
+var b = (w-60)
+function setup(){
+  createCanvas(w,h);
+
+  
+  
+}
+function draw(){
+  clear()
+  //create my player
+  rect(playerX, playerY, 50,50);
+  //color player red
+  fill("red");
+  
+  if(keyIsDown(87)){
+    if(playerY < h-h){
+      playerY-=0;
+    }
+    else if((playerY < h)||(playerY > h)){
+      playerY-=5;
+    }
+  }
+  if(keyIsDown(83)){
+    if(playerY > a){
+      playerY+=0;
+    }
+    else if((playerY > h-h) || (playerY < h)){
+      playerY+=5;
+    }
+    
+  }
+  if(keyIsDown(68)){
+    if(playerX > b){
+      playerX+=0;
+    }
+    else if((playerX < w-w) || (playerX < w)){
+      playerX+=5;
+    }
+  }
+  if(keyIsDown(65)){
+    if(playerX < w-w){
+      playerX-=0;
+    }
+    else if((playerX > w-w) ||(playerX > w)){
+      playerX-=5;
+    }
+  }
+
+
+  
+  
+  //move the player down when the s key is held down
+ // else if(keyIsDown(83) && ((playerY > h-h) || (playerY < h) || (playerX < w-w) || (playerX < w))){
+   // playerY+=5;
+  //}
+  //else if(keyIsDown(65)&& ((playerY < h-h) || (playerY < h) || (playerX < w-w) || (playerX > w))){
+  //  playerX-=5;
+  //}
+  //else if(keyIsDown(68)&& ((playerY < h-h) || (playerY < h) || (playerX > w-w) || (playerX < w))){
+    //playerX+=5;
+  //}
+  
+  //move the player down when the s key is held down
+ 
+  
+  
+  
+
+}
+
+  
+  
+
+
+
+      
+  
+      
+    </script>
+  </body>
+</html>
